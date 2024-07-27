@@ -127,9 +127,9 @@ int main()
     glDeleteProgram(shaderProgram);
 
 
-	// Delete window before ending the program
+	// Delete window before ending the program.
 	glfwDestroyWindow(window);
-	// Terminate GLFW before ending the program
+	// Terminate GLFW before ending the program.
 	glfwTerminate();
 	return 0;
 }
