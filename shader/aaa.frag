@@ -20,7 +20,7 @@ mat2 rotate(float angle){
 }
 
 void main() {
-    // Normalize the pixel coordinates to the range [-1, 1]
+    // Normalize the pixel coordinates to the range [-1, 1]...
     vec2 uv = ((gl_FragCoord.xy * 2.0 - u_resolution.xy) / u_resolution.y) ;
     uv = rotate(u_time)*uv;
     float d = sdRhombus(uv,vec2(0.3,0.3));
