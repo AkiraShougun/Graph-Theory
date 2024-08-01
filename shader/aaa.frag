@@ -31,6 +31,6 @@ void main() {
 
     color *= d;
 
-    // Set the fragment color...
+    // Set the fragment color......
     gl_FragColor = vec4(color, 1);
 }
