@@ -29,6 +29,7 @@ void main() {
     // Determine the color of the pixel
     d=0.1/d;
 
+
     color *= d;
 
     // Set the fragment color......
