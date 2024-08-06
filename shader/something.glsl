@@ -33,8 +33,9 @@ vec3 sdgHeart( in vec2 p )
 }
 
 void main(){
-    float var = abs(1.5*cos(sin(u_time)));
-    vec2 uv = ((gl_FragCoord.xy * 4.0 - u_resolution.xy) / u_resolution.y) -0.6 ;
+    float var = abs(3.5*cos(sin(u_time)));
+    vec2 uv = ((gl_FragCoord.xy * 2.0 - u_resolution.xy) / u_resolution.y) ;
+    uv.y = uv.y +0.2;
     uv = mat2(var,0,0.,var)*uv;
     vec3 shape = sdgHeart(uv);
     float d = shape.x;
