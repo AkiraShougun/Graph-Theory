@@ -2,7 +2,7 @@
 precision highp float;
 #endif
 
-// Enable the standard derivatives extension
+// Enable the standard derivatives extension...
 #extension GL_OES_standard_derivatives : enable
 uniform vec2 u_resolution;
 
