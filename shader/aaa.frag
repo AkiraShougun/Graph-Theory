@@ -26,7 +26,7 @@ void main() {
     float d = sdRhombus(uv,vec2(0.3,0.3));
     vec3 color = vec3(0.2118, 0.7412, 0.8314);
     d=abs(d);
-    // Determine the color of the pixel...
+    // Determine the color of the pixel......
     d=0.1/d;
 
 
