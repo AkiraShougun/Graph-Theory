@@ -87,13 +87,3 @@ int length(struct Stack *st)
     }
     return len;
 }
-
-int main()
-{
-    struct Stack *st = create_stack();
-    push(st, 1);
-    push(st, 2);
-    pop(st);
-    printf("%d", length(st));
-    destroy(st);
-}
