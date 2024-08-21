@@ -3,7 +3,6 @@ precision mediump float;
 #endif
 
 uniform vec2 u_resolution;
-uniform float u_time;
 
 void main() {
     vec2 c =  ((gl_FragCoord.xy * 2.0 - u_resolution.xy) / u_resolution.y) ;

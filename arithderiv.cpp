@@ -1,6 +1,7 @@
 #include <iostream>
 #include <cmath>
 #include <map>
+
 std::map<int, int> factorization(int n)
 {
     std::map<int, int> temp;
@@ -31,16 +32,15 @@ std::map<int, int> factorization(int n)
     return temp;
 }
 
-double arithmeticDerivative(int n)
+int arithmeticDerivative(int n)
 {
     std::map<int, int> primefac = factorization(n);
-    double quotient = 0;
-    for (const auto &pair : primefac)
+    float quotient = 0;
+    for (const auto [p, e] : primefac)
     {
-        quotient = quotient + static_cast<double>(pair.second) / pair.first;
-        ;
+        quotient = quotient + static_cast<float>(e) / p;
     }
-    return (n * quotient);
+    return int(n * quotient);
 }
 
 int main()
@@ -74,33 +74,6 @@ int main()
     }
 
     std::cout << "Exiting the program." << std::endl;
+
     return 0;
 }
-
-// A function to print all prime factors of a given number n
-// void primeFactors(int n)
-// {
-//     // Print the number of 2s that divide n
-//     while (n % 2 == 0)
-//     {
-//         std::cout << 2 << " ";
-//         n = n / 2;
-//     }
-
-//     // n must be odd at this point. So we can skip
-//     // one element (Note i = i + 2)
-//     for (int i = 3; i <= std::sqrt(n); i = i + 2)
-//     {
-//         // While i divides n, print i and divide n
-//         while (n % i == 0)
-//         {
-//             std::cout << i << " ";
-//             n = n / i;
-//         }
-//     }
-
-//     // This condition is to handle the case when n
-//     // is a prime number greater than 2
-//     if (n > 2)
-//         std::cout << n << " ";
-// }
