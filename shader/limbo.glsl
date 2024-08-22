@@ -1,5 +1,6 @@
-#version GLSL_ES_3.00
-precision lowp float;
+#ifdef GL_ES
+precision mediump float;
+#endif
 
 const float primes[2] = float[2](1.0,2.0);
 void main() {
