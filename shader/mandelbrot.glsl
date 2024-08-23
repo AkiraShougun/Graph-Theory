@@ -2,7 +2,7 @@
 precision mediump float;
 #endif
 
-//Nice
+
 
 uniform vec2 u_resolution;
 
