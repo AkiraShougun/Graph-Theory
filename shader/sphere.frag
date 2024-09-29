@@ -32,9 +32,9 @@ void main() {
     spherePos.z = sqrt(radius * radius - dot(spherePos.xy, spherePos.xy));
     spherePos = rot * spherePos;
 
-    float lighting = dot(spherePos, vec3(0.0, 0.0, 1.0));
+    float lighting = dot(spherePos, vec3(0.9255, 0.2627, 0.1137));
     lighting = clamp(lighting, 0.0, 1.0);
 
-    vec3 color = vec3(0.2, 0.6, 1.0) * lighting;
+    vec3 color = vec3(0.92) * lighting;
     gl_FragColor = vec4(color, 1.0);
 }
