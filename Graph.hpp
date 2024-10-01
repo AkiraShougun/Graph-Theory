@@ -146,4 +146,23 @@ Graph cycleGraph(int n)
     return g;
 }
 
-bool isIsomorphic(Graph *g, Graph *h);
+bool isIsomorphic(Graph *g, Graph *h)
+{
+    if (g->n != h->n)
+    {
+        return false;
+    }
+    if (g->EdgeNumber != h->EdgeNumber)
+    {
+        return false;
+    }
+    if (g->H_1() != h->H_1())
+    {
+        return false;
+    }
+    if (g->isEulerianCycle() != h->isEulerianCycle())
+    {
+        return false;
+    }
+    return true;
+};
