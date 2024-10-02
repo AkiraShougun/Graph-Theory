@@ -36,6 +36,7 @@ struct Graph
             return;
         }
         matrix[u][v]++;
+        matrix[v][u]++;
         EdgeNumber++;
     }
 
@@ -44,6 +45,7 @@ struct Graph
         if (matrix[u][v] > 0)
         {
             matrix[u][v]--;
+            matrix[v][u]--;
             EdgeNumber--;
         }
     }
@@ -64,7 +66,6 @@ struct Graph
         for (int i = 0; i < n; i++)
         {
             deg += matrix[u][i];
-            deg += matrix[i][u];
         }
         return deg;
     }
