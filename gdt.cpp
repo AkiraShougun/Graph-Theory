@@ -1,6 +1,6 @@
 #include <iostream>
 #include <fstream>
-#include "graph.hpp"
+#include "Graph.hpp"
 
 void createGraph(Graph &g, std::string filename, std::string params)
 {
@@ -10,17 +10,18 @@ void createGraph(Graph &g, std::string filename, std::string params)
     file << params << "\n";
     file << "node [shape=circle];\n";
     // Print all vertices
-    for (int i = 0; i < g.n; i++)
+    for (int i = 0; i < g.VertexNumber; i++)
     {
         file << i << ";\n";
     }
-    for (int i = 0; i < g.n; i++)
+    // Print all edges
+    for (int i = 0; i < g.VertexNumber; i++)
     {
-        for (int j = 0; j < g.n; j++)
+        for (int j = i; j < g.VertexNumber; j++)
         {
-            if (g.matrix[i][j] > 0)
+            if (g.isEdge(i, j))
             {
-                file << i << " -- " << j << "\n";
+                file << i << " -- " << j << ";\n";
             }
         }
     }
@@ -30,10 +31,11 @@ void createGraph(Graph &g, std::string filename, std::string params)
 
 int main()
 {
-    Graph g = completeGraph(30);
+    Graph g = completeGraph(5);
 
     // std::cout << "H_1 = " << g.H_1() << std::endl;
     createGraph(g, "graph.dot", "layout=circo");
     system("dot -Tpng graph.dot -o graph.png");
+    g.printGraph();
     return 0;
 }
