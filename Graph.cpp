@@ -3,6 +3,7 @@
 #include <vector>
 #include <map>
 
+// Constructor
 Graph::Graph(int n)
 {
     this->VertexNumber = n;
@@ -14,6 +15,7 @@ Graph::Graph(int n)
     EdgeNumber = 0;
 }
 
+// Add a vertex
 void Graph::addVertex()
 {
     VertexNumber++;
@@ -24,6 +26,7 @@ void Graph::addVertex()
     }
 }
 
+// Add an edge between u and v
 void Graph::addEdge(int u, int v)
 {
     if (u >= VertexNumber || v >= VertexNumber)
@@ -35,6 +38,7 @@ void Graph::addEdge(int u, int v)
     EdgeNumber++;
 }
 
+// Remove an edge between u and v
 void Graph::removeEdge(int u, int v)
 {
     if (matrix[u][v] > 0)
@@ -45,6 +49,7 @@ void Graph::removeEdge(int u, int v)
     }
 }
 
+// Check if there is an edge between u and v
 bool Graph::isEdge(int u, int v)
 {
     return matrix[u][v] > 0;
@@ -55,6 +60,7 @@ int Graph::H_1()
     return EdgeNumber - VertexNumber + 1;
 }
 
+// Degree
 int Graph::degree(int u)
 {
     int deg = 0;
@@ -65,6 +71,7 @@ int Graph::degree(int u)
     return deg;
 }
 
+// Eulerian Cycle
 bool Graph::isEulerianCycle()
 {
     for (int i = 0; i < VertexNumber; i++)
@@ -90,6 +97,7 @@ void Graph::printGraph()
     }
 }
 
+// Adjacency List
 std::map<int, std::vector<int>> Graph::AdjList()
 {
     std::map<int, std::vector<int>> adjList;
