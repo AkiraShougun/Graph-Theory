@@ -84,7 +84,7 @@ bool Graph::isEulerianCycle()
     return true;
 }
 
-// Print
+// Print.
 void Graph::printGraph()
 {
     for (int i = 0; i < VertexNumber; i++)
