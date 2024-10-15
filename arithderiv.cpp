@@ -6,7 +6,7 @@ std::map<int, int> factorization(int n)
 {
     std::map<int, int> temp;
 
-    // Check for factor 2
+    // Check for factor 2.
     while (n % 2 == 0)
     {
         temp[2]++;
