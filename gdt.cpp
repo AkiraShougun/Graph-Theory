@@ -9,7 +9,7 @@ void createGraph(Graph &g, std::string filename, std::string params)
     file << "graph G {\n";
     file << params << "\n";
     file << "node [shape=circle];\n";
-    // Print all vertices.
+    // Print all vertices...
     for (int i = 0; i < g.VertexNumber; i++)
     {
         file << i << ";\n";
