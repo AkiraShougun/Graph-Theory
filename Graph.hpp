@@ -25,5 +25,6 @@ struct Graph
 
 Graph completeGraph(int n);
 Graph cycleGraph(int n);
+Graph starGraph(int n);
 bool isIsomorphic(Graph *g, Graph *h);
 #endif // GRAPH_HPP

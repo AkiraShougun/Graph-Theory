@@ -149,6 +149,16 @@ Graph cycleGraph(int n)
     return g;
 }
 
+Graph starGraph(int n)
+{
+    Graph g(n);
+    for (int i = 1; i < n; i++)
+    {
+        g.addEdge(0, i);
+    }
+    return g;
+}
+
 bool isIsomorphic(Graph *g, Graph *h)
 {
     if (g->VertexNumber != h->VertexNumber)

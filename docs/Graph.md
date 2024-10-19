@@ -56,8 +56,12 @@ Represents an undirected graph.
 - **Graph cycleGraph(int n)**
   - Creates and returns a cycle graph with `n` vertices.
 
+- **Graph starGraph(int n)**
+  - Creates and returns a star graph with 'n' vertices.
+
 - **bool isIsomorphic(Graph *g, Graph *h)**
   - Checks if two graphs `g` and `h` are isomorphic.
+
 
 ## Usage
 To use the graph data structure, include the `Graph.hpp` file in your project and create instances of `Graph`. Use the provided methods to manipulate the graph.
