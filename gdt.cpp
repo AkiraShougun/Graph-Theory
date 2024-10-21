@@ -31,11 +31,10 @@ void createGraph(Graph &g, std::string filename, std::string params)
 
 int main()
 {
-    Graph g = completeGraph(5);
+    Graph g = starGraph(10);
 
     // std::cout << "H_1 = " << g.H_1() << std::endl;
     createGraph(g, "graph.dot", "layout=circo");
     system("dot -Tpng graph.dot -o graph.png");
-    g.printGraph();
     return 0;
 }

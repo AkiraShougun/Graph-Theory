@@ -24,8 +24,8 @@ void main() {
     vec2 uv = ((gl_FragCoord.xy * 2.0 - u_resolution.xy) / u_resolution.y) ;
     uv = rotate(u_time)*uv;
     float d = sdRhombus(uv,vec2(0.3,0.3));
-    //vec3 color = vec3(0.2118, 0.7412, 0.8314);
-    vec3 color = vec3(0.3, 0.3*sin(u_time), cos(u_time));
+    vec3 color = vec3(0.1765, 0.3882, 0.4824);
+    //vec3 color = vec3(0.3, 0.3*sin(u_time), cos(u_time));
     d=abs(d);
     // Determine the color of the pixel......
     d=0.1/d;
