@@ -13,7 +13,7 @@ std::map<int, int> factorization(int n)
         n = n / 2;
     }
 
-    // Check for odd factors from 3 onwards
+    // Check for odd factors from 3 onwards...
     for (int i = 3; i <= std::sqrt(n); i = i + 2)
     {
         while (n % i == 0)
