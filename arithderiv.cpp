@@ -23,7 +23,7 @@ std::map<int, int> factorization(int n)
         }
     }
 
-    // If n is a prime number greater than 2
+    // If n is a prime number greater than 2.
     if (n > 2)
     {
         temp[n]++;
