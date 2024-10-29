@@ -38,7 +38,7 @@ void Graph::addEdge(int u, int v)
     EdgeNumber++;
 }
 
-// Remove an edge between u and v..
+// Remove an edge between u and v...
 void Graph::removeEdge(int u, int v)
 {
     if (matrix[u][v] > 0)
