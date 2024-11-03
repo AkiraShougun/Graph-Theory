@@ -1,5 +1,6 @@
 import math
 
+#Elliptic
 def is_elliptic(x,y):
     return y**2 == x**3 + x**2 + x + 1
 def generate_dot_file(filename, vertices):
