@@ -14,7 +14,7 @@ void createGraph(Graph &g, std::string filename, std::string params)
     {
         file << i << ";\n";
     }
-    // Print all edges...
+    // Print all edges......
     for (int i = 0; i < g.VertexNumber; i++)
     {
         for (int j = i; j < g.VertexNumber; j++)
