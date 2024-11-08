@@ -3,7 +3,7 @@
 #include <vector>
 #include <map>
 
-// Constructor
+// Constructor.
 Graph::Graph(int n)
 {
     this->VertexNumber = n;
