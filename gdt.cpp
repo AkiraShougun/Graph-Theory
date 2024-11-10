@@ -26,7 +26,6 @@ void createGraph(Graph &g, std::string filename, std::string params)
         }
     }
     file << "}";
-    file.close();
 }
 
 int main()
