@@ -20,7 +20,6 @@ struct Graph
     bool isEulerianCycle();
     void printGraph();
     std::map<int, std::vector<int>> AdjList();
-    ~Graph();
 };
 
 Graph completeGraph(int n);

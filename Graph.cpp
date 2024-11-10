@@ -114,15 +114,6 @@ std::map<int, std::vector<int>> Graph::AdjList()
     return adjList;
 }
 
-Graph::~Graph()
-{
-    for (int i = 0; i < VertexNumber; i++)
-    {
-        matrix[i].clear();
-    }
-    matrix.clear();
-}
-
 Graph completeGraph(int n)
 {
     Graph g(n);
