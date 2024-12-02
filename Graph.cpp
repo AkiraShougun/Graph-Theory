@@ -150,6 +150,7 @@ Graph starGraph(int n)
     return g;
 }
 
+// Still working on it
 bool isIsomorphic(Graph *g, Graph *h)
 {
     if (g->VertexNumber != h->VertexNumber)
@@ -170,3 +171,8 @@ bool isIsomorphic(Graph *g, Graph *h)
     }
     return true;
 };
+
+std::string chromaticPolynomial(Graph *g)
+{
+    // if tree then return x^(n-1)(x-1)
+}

@@ -35,7 +35,7 @@ void main() {
     float lighting = dot(spherePos, vec3(0.7216, 0.1451, 0.0118));
     lighting = clamp(lighting, 0.0, 1.0);
 
-    vec3 color = vec3(0.9804, 0.3961, 0.0314) * lighting;
+    vec3 color = vec3(0.0314, 0.8078, 0.9804) * lighting;
     gl_FragColor = vec4(color, 1.0);
     //...
 }
