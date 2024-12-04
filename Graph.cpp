@@ -174,5 +174,5 @@ bool isIsomorphic(Graph *g, Graph *h)
 
 std::string chromaticPolynomial(Graph *g)
 {
-    // if tree then return x^(n-1)(x-1)
+    // if tree then return x^(n-1)(x-1).
 }
